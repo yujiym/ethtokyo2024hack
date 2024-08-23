@@ -11,8 +11,12 @@ export function getConfig() {
     }),
     ssr: true,
     transports: {
-      [sepolia.id]: http(),
-      [scrollSepolia.id]: http(),
+      [sepolia.id]: http(
+        "https://gateway-api.cabinet-node.com/5b718fd2352985b5bb5c677cb006bc24"
+      ),
+      [scrollSepolia.id]: http(
+        "https://gateway-api.cabinet-node.com/e1416a4e1b562995cc52b2864a20a061"
+      ),
     },
   });
 }
